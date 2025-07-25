@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>棋木的小窝 - VIM</title>
+    <subtitle>棋木的个人空间</subtitle>
+    <link rel="self" type="application/atom+xml" href="/tags/vim/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-09-19T00:00:00+00:00</updated>
+    <id>/tags/vim/atom.xml</id>
+    <entry xml:lang="en">
+        <title>VimScript 备忘笔记</title>
+        <published>2024-09-19T00:00:00+00:00</published>
+        <updated>2024-09-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/vimscript-rules/"/>
+        <id>/vimscript-rules/</id>
+        
+        <content type="html" xml:base="/vimscript-rules/">&lt;h1 id=&quot;ming-ling&quot;&gt;命令&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以下命令缺省“:”。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;预备知识&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 获取 MYVIMRC 文件路径&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;echo&lt;&#x2F;span&gt; $MYVIMRC &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; ~&#x2F;.config&#x2F;nvim&#x2F;init.lua
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;打印信息&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help &lt;span class=&quot;z-support z-function z-viml&quot;&gt;echo&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; :ec[ho] expr1 ..
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help echom &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; :echom[sg] expr1 ..
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help messages &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; :message  -&amp;gt; 查看日志
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;echo&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot;message&amp;quot;&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 屏幕打印信息
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;echom &lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot;message&amp;quot;&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 屏幕打印信息时，信息记录与 messages 中
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;messages &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 查看echom命令输出的信息
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习: 每次打开 Vim 时显示 ( &amp;gt;^.^&amp;lt; )&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; .vimrc echo &amp;gt;^.^&amp;lt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;设置选项&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 布尔选项 set &amp;lt;name&amp;gt; 打开选项 set no&amp;lt;name&amp;gt; 关闭选项&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; number &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 设置显示行号
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; nonumber &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 设置不显示行号
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; number! &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 切换当前选项
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; number? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 查看当前选项
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 键值选项 set &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt; 设置选项&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; numberwidth=&lt;span class=&quot;z-constant z-numeric z-integer&quot;&gt;10&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 改变行号列宽
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; numberwidth? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 查看行号列宽
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 常用选项&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; wrap? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 单行文本截断
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; shiftround? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; shiftwidth整数倍对齐
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; matchtime? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; showmatch 开启时，显示括号匹配的时间
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 一次设置多个选项&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; number numberwidth=&lt;span class=&quot;z-constant z-numeric z-integer&quot;&gt;6&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 设置显示行号，同时设置行号显示宽度
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help &lt;span class=&quot;z-string z-quoted z-single z-viml&quot;&gt;&amp;#39;number&amp;#39;&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; nu[ber] 
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help relativenumber &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; rnu | relativenumber
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help numberwidth &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; nuw | numberwidth (default 4)
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help wrap &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; wrap (default on)
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help shiftround &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; sr | shiftround (default off)
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help matchtime &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; mat[chtime] (default 5)
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;基本映射&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 基本映射&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; - X
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; - dd 
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 特殊字符&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;space&amp;gt;&lt;&#x2F;span&gt; viw
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;c-d&amp;gt;&lt;&#x2F;span&gt; dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 注释失效！！！&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;space&amp;gt;&lt;&#x2F;span&gt; viw &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 注释失效！！！
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 映射 - 为“删除当前行，然后粘贴到下一行”&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; - ddp
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 映射 _ 为当前行向上移动一行&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;map&lt;&#x2F;span&gt; _ ddkkp
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;模式映射&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; normal模式 删除当前行&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nmap&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt; dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; visual模式文本转换为大写&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;vmap&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt; U
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; insert模式 删除一行&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;imap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;c-d&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;ddi
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; insert模式 按下&amp;lt;c-u&amp;gt;当前光标单词转换为大写格式&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;imap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;c-u&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;viwUi
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; normal模式 按下&amp;lt;c-u&amp;gt;当前光标单词转换为大写，并进入插入模式&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;精确映射&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 非递归映射 《任何时候！！！》&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt; dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help &lt;span class=&quot;z-support z-function z-viml&quot;&gt;unmap&lt;&#x2F;span&gt; &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; unm[ap]  -&amp;gt; unm[ap] nun[map] vu[nmap] xu[nmap] sunm[ap] ou[nmap] unm[ap]! iu[nmap] lu[nmap] cu[nmap] tunma[p]
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Leaders&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 映射按键序列（前缀）&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; -d dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; -c ddO
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; Leaders&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;let&lt;&#x2F;span&gt; mapleader = &lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot;-&amp;quot;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;d dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;c ddO
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; LocalLeader 仅对部分文件设置&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;let&lt;&#x2F;span&gt; maplocalleader = &lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot;\\&amp;quot;&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot; 注意&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot; 是 &amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;\&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 的转义
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;localleader&amp;gt;&lt;&#x2F;span&gt;d dd
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;localleader&amp;gt;&lt;&#x2F;span&gt;c ddO
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help mapleader &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; map &amp;lt;leader&amp;gt;A oanther line&amp;lt;esc&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help maplocalleader &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; map &amp;lt;buffer&amp;gt; &amp;lt;localleader&amp;gt;A oanther line&amp;lt;esc&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑你的Vimrc文件&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 编辑我的vimrc文件&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;ev :vspilt $MYVIMRC&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;cr&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 重读我的vimrc文件&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;sv :source $MYVIMRC&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;cr&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help myvimrc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Abbreviactions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 适用于insert、replace、command模式&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;iabbrev adn and &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; 输入非字母、数字、下划线的字符，引发替换
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;set&lt;&#x2F;span&gt; iskeyword? &lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt; iskeyword=@,48-57,_,192-255
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;iabbrev &lt;span class=&quot;z-variable z-other z-viml&quot;&gt;@&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-viml&quot;&gt;@&lt;&#x2F;span&gt; echemoo&lt;span class=&quot;z-variable z-other z-viml&quot;&gt;@gmail&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;.&lt;&#x2F;span&gt;com
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;iabbrev ccopy Copyright &lt;span class=&quot;z-constant z-numeric z-integer&quot;&gt;2024&lt;&#x2F;span&gt; Jonas Lee, all rights reserved&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;.&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 按键映射 vs Abbreviations(按键映射输入即替换，易出错)&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;inoremap&lt;&#x2F;span&gt; ssig -- &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;cr&amp;gt;&lt;&#x2F;span&gt;Jonas Lee&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;cr&amp;gt;&lt;&#x2F;span&gt;echemoo&lt;span class=&quot;z-variable z-other z-viml&quot;&gt;@gmail&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-function z-viml&quot;&gt;.&lt;&#x2F;span&gt;com
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 添加邮箱、博客网址、签名等abbreviations配置；&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 添加常用文本配置&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;更多的Mappings&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;vim&quot; class=&quot;language-vim z-code&quot;&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 更常用的退出(停顿 vs 无停顿)&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;inoremap&lt;&#x2F;span&gt; jk &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 更复杂的Mapping（当前单词收尾插入引号）&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot; viw&amp;lt;esc&amp;gt;a&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;hbi&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&amp;lt;esc&amp;gt;lel
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 练习&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 创建单引号版本；&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;nnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-single z-viml&quot;&gt;&amp;#39; viw&amp;lt;esc&amp;gt;a&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;hbi&amp;#39;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;lel
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; 引号将高亮选中的文本包裹。&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;vnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-viml&quot;&gt;&amp;quot; &amp;lt;esc&amp;gt;`&amp;lt;i&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;`&amp;gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;la&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-vim&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&amp;lt;esc&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;vnoremap&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;leader&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-single z-viml&quot;&gt;&amp;#39; &amp;lt;esc&amp;gt;`&amp;lt;i&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;`&amp;gt;&lt;span class=&quot;z-support z-function z-viml&quot;&gt;la&lt;&#x2F;span&gt;&amp;#39;&lt;span class=&quot;z-support z-type z-viml&quot;&gt;&amp;lt;esc&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; normal模式下 H 映射为当前行首部。&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;&lt;span class=&quot;z-comment z-line z-quotes z-viml&quot;&gt;&amp;quot; normal模式下 L 映射为当前行尾部。&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help H
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-viml&quot;&gt;help L
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

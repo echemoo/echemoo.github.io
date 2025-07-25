@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+      <meta name="description" content="棋木的个人空间" />
+      
+    
+
+      <title>棋木的小窝 - GO微服务开发环境搭建</title>
+
+      
+
+      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+                  onload="renderMathInElement(document.body);"></script>
+              
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="&#x2F;" class="logo">棋木的小窝</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;">
+                            首页
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;categories">
+                            分类
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;tags">
+                            标签
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;about">
+                            关于
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="&#x2F;">棋木的小窝</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="&#x2F;">
+                                    首页
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;categories">
+                                    分类
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;tags">
+                                    标签
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;about">
+                                    关于
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="/go-microservices/#yi-lai-huan-jing" class="toc-link">依赖环境</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/go-microservices/#gong-cheng-huan-jing" class="toc-link">工程环境</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="&#x2F;go-microservices&#x2F;">GO微服务开发环境搭建</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2024-09-25</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="yi-lai-huan-jing">依赖环境</h1>
+<ul>
+<li>开发工具：neovim 0.10.1</li>
+<li>go版本：1.23.1</li>
+</ul>
+<h1 id="gong-cheng-huan-jing">工程环境</h1>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mkdir</span></span><span class="z-meta z-function-call z-arguments z-shell"> gomall</span> <span class="z-keyword z-operator z-logical z-and z-shell">&amp;&amp;</span> <span class="z-meta z-function-call z-shell"><span class="z-support z-function z-cd z-shell">cd</span></span><span class="z-meta z-function-call z-arguments z-shell"> gomall</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">mkdir</span></span><span class="z-meta z-function-call z-arguments z-shell"> helloworld</span> <span class="z-keyword z-operator z-logical z-and z-shell">&amp;&amp;</span> <span class="z-meta z-function-call z-shell"><span class="z-support z-function z-cd z-shell">cd</span></span><span class="z-meta z-function-call z-arguments z-shell"> gomall</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">go</span></span><span class="z-meta z-function-call z-arguments z-shell"> mod init github.com/echemoo/gomall/helloworld</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">go</span></span><span class="z-meta z-function-call z-arguments z-shell"> get<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>u</span> github.com/cloudwego/hertz</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">touch</span></span><span class="z-meta z-function-call z-arguments z-shell"> main.go</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">vim</span></span><span class="z-meta z-function-call z-arguments z-shell"> main.go</span>
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> 编写文件</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">go</span></span><span class="z-meta z-function-call z-arguments z-shell"> mod tidy</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">go</span></span><span class="z-meta z-function-call z-arguments z-shell"> run main.go</span>
+</span></code></pre>
+<p>main.go文件内容：</p>
+<pre data-lang="go" class="language-go z-code"><code class="language-go" data-lang="go"><span class="z-source z-go"><span class="z-keyword z-other z-package z-go">package</span> <span class="z-variable z-other z-go">main</span>
+</span><span class="z-source z-go">
+</span><span class="z-source z-go"><span class="z-keyword z-other z-import z-go">import</span> <span class="z-punctuation z-section z-parens z-begin z-go">(</span>
+</span><span class="z-source z-go">	<span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>context<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span>
+</span><span class="z-source z-go">
+</span><span class="z-source z-go">	<span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>github.com/cloudwego/hertz/pkg/app<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span>
+</span><span class="z-source z-go">	<span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>github.com/cloudwego/hertz/pkg/app/server<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span>
+</span><span class="z-source z-go">
+</span><span class="z-source z-go">	<span class="z-comment z-line z-go"><span class="z-punctuation z-definition z-comment z-go">//</span> &quot;github.com/cloudwego/hertz/pkg/common/utils&quot;
+</span></span><span class="z-source z-go">	<span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>github.com/cloudwego/hertz/pkg/protocol/consts<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span>
+</span><span class="z-source z-go"><span class="z-punctuation z-section z-parens z-end z-go">)</span>
+</span><span class="z-source z-go">
+</span><span class="z-source z-go"><span class="z-storage z-type z-keyword z-function z-go">func</span> <span class="z-entity z-name z-function z-go">main</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-punctuation z-section z-parens z-end z-go">)</span> <span class="z-meta z-block z-go"><span class="z-punctuation z-section z-braces z-begin z-go">{</span>
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go">	<span class="z-variable z-declaration z-go">h</span> <span class="z-keyword z-operator z-assignment z-go">:=</span> <span class="z-variable z-other z-go">server</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-function z-go">Default</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-punctuation z-section z-parens z-end z-go">)</span>
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go">
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go">	<span class="z-variable z-other z-go">h</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-function z-go">GET</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>/hello<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span><span class="z-punctuation z-separator z-go">,</span> <span class="z-storage z-type z-keyword z-function z-go">func</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-variable z-parameter z-go">ctx</span> <span class="z-variable z-other z-go">context</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-storage z-type z-go">Context</span><span class="z-punctuation z-separator z-go">,</span> <span class="z-variable z-parameter z-go">c</span> <span class="z-keyword z-operator z-go">*</span><span class="z-variable z-other z-go">app</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-storage z-type z-go">RequestContext</span><span class="z-punctuation z-section z-parens z-end z-go">)</span> <span class="z-meta z-block z-go"><span class="z-punctuation z-section z-braces z-begin z-go">{</span>
+</span></span></span><span class="z-source z-go"><span class="z-meta z-block z-go"><span class="z-meta z-block z-go">		<span class="z-comment z-line z-go"><span class="z-punctuation z-definition z-comment z-go">//</span> c.JSON(consts.StatusOK, utils.H{&quot;message&quot;: &quot;pong&quot;})
+</span></span></span></span><span class="z-source z-go"><span class="z-meta z-block z-go"><span class="z-meta z-block z-go">		<span class="z-variable z-other z-go">c</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-function z-go">Data</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-variable z-other z-go">consts</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-other z-member z-go">StatusOK</span><span class="z-punctuation z-separator z-go">,</span> <span class="z-variable z-other z-go">consts</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-other z-member z-go">MIMETextPlain</span><span class="z-punctuation z-separator z-go">,</span> <span class="z-punctuation z-section z-brackets z-begin z-go">[</span><span class="z-punctuation z-section z-brackets z-end z-go">]</span><span class="z-storage z-type z-go"><span class="z-support z-type z-builtin z-go">byte</span></span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-string z-quoted z-double z-go"><span class="z-punctuation z-definition z-string z-begin z-go">&quot;</span>hello world!<span class="z-punctuation z-definition z-string z-end z-go">&quot;</span></span><span class="z-punctuation z-section z-parens z-end z-go">)</span><span class="z-punctuation z-section z-parens z-end z-go">)</span>
+</span></span></span><span class="z-source z-go"><span class="z-meta z-block z-go"><span class="z-meta z-block z-go">	<span class="z-punctuation z-section z-braces z-end z-go">}</span></span><span class="z-punctuation z-section z-parens z-end z-go">)</span>
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go">
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go">	<span class="z-variable z-other z-go">h</span><span class="z-punctuation z-accessor z-dot z-go">.</span><span class="z-variable z-function z-go">Spin</span><span class="z-punctuation z-section z-parens z-begin z-go">(</span><span class="z-punctuation z-section z-parens z-end z-go">)</span>
+</span></span><span class="z-source z-go"><span class="z-meta z-block z-go"><span class="z-punctuation z-section z-braces z-end z-go">}</span></span>
+</span></code></pre>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="/tags/si-ren/">#私人</a>
+                    
+                        <a href="/tags/go/">#GO</a>
+                    
+                        <a href="/tags/wei-fu-wu/">#微服务</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                    
+                        <a class="next" href="&#x2F;vimscript-rules&#x2F;">VimScript 备忘笔记 ›</a>
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="/even.js" ></script>
+      
+    </body>
+
+</html>

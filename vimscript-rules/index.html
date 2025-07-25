@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+      <meta name="description" content="棋木的个人空间" />
+      
+    
+
+      <title>棋木的小窝 - VimScript 备忘笔记</title>
+
+      
+
+      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+              
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+                  onload="renderMathInElement(document.body);"></script>
+              
+          
+      
+
+      
+          <link rel="stylesheet" href="/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="&#x2F;" class="logo">棋木的小窝</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;">
+                            首页
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;categories">
+                            分类
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;tags">
+                            标签
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="&#x2F;&#x2F;about">
+                            关于
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="&#x2F;">棋木的小窝</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="&#x2F;">
+                                    首页
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;categories">
+                                    分类
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;tags">
+                                    标签
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="&#x2F;&#x2F;about">
+                                    关于
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="/vimscript-rules/#ming-ling" class="toc-link">命令</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="&#x2F;vimscript-rules&#x2F;">VimScript 备忘笔记</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2024-09-19</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <h1 id="ming-ling">命令</h1>
+<blockquote>
+<p>以下命令缺省“:”。</p>
+</blockquote>
+<ul>
+<li>预备知识</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 获取 MYVIMRC 文件路径</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">echo</span> $MYVIMRC <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> ~/.config/nvim/init.lua
+</span></span></code></pre>
+<ul>
+<li>打印信息</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml">help <span class="z-support z-function z-viml">echo</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> :ec[ho] expr1 ..
+</span></span><span class="z-source z-viml">help echom <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> :echom[sg] expr1 ..
+</span></span><span class="z-source z-viml">help messages <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> :message  -&gt; 查看日志
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">echo</span> <span class="z-string z-quoted z-double z-viml">&quot;message&quot;</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 屏幕打印信息
+</span></span><span class="z-source z-viml">echom <span class="z-string z-quoted z-double z-viml">&quot;message&quot;</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 屏幕打印信息时，信息记录与 messages 中
+</span></span><span class="z-source z-viml">messages <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 查看echom命令输出的信息
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习: 每次打开 Vim 时显示 ( &gt;^.^&lt; )</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; .vimrc echo &gt;^.^&lt;</span>
+</span></code></pre>
+<ul>
+<li>设置选项</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 布尔选项 set &lt;name&gt; 打开选项 set no&lt;name&gt; 关闭选项</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> number <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 设置显示行号
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> nonumber <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 设置不显示行号
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> number! <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 切换当前选项
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> number? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 查看当前选项
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 键值选项 set &lt;name&gt;=&lt;value&gt; 设置选项</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> numberwidth=<span class="z-constant z-numeric z-integer">10</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 改变行号列宽
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> numberwidth? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 查看行号列宽
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 常用选项</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> wrap? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 单行文本截断
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> shiftround? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> shiftwidth整数倍对齐
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> matchtime? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> showmatch 开启时，显示括号匹配的时间
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 一次设置多个选项</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> number numberwidth=<span class="z-constant z-numeric z-integer">6</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 设置显示行号，同时设置行号显示宽度
+</span></span><span class="z-source z-viml">
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml">help <span class="z-string z-quoted z-single z-viml">&#39;number&#39;</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> nu[ber] 
+</span></span><span class="z-source z-viml">help relativenumber <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> rnu | relativenumber
+</span></span><span class="z-source z-viml">help numberwidth <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> nuw | numberwidth (default 4)
+</span></span><span class="z-source z-viml">help wrap <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> wrap (default on)
+</span></span><span class="z-source z-viml">help shiftround <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> sr | shiftround (default off)
+</span></span><span class="z-source z-viml">help matchtime <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> mat[chtime] (default 5)
+</span></span></code></pre>
+<ul>
+<li>基本映射</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 基本映射</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> - X
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> - dd 
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 特殊字符</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> <span class="z-support z-type z-viml">&lt;space&gt;</span> viw
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> <span class="z-support z-type z-viml">&lt;c-d&gt;</span> dd
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 注释失效！！！</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> <span class="z-support z-type z-viml">&lt;space&gt;</span> viw <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 注释失效！！！
+</span></span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 映射 - 为“删除当前行，然后粘贴到下一行”</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> - ddp
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 映射 _ 为当前行向上移动一行</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">map</span> _ ddkkp
+</span></code></pre>
+<ul>
+<li>模式映射</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; normal模式 删除当前行</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nmap</span> <span class="z-storage z-function z-viml">\</span> dd
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; visual模式文本转换为大写</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">vmap</span> <span class="z-storage z-function z-viml">\</span> U
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; insert模式 删除一行</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">imap</span> <span class="z-support z-type z-viml">&lt;c-d&gt;</span> <span class="z-support z-type z-viml">&lt;esc&gt;</span>ddi
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; insert模式 按下&lt;c-u&gt;当前光标单词转换为大写格式</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">imap</span> <span class="z-support z-type z-viml">&lt;c-u&gt;</span> <span class="z-support z-type z-viml">&lt;esc&gt;</span>viwUi
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; normal模式 按下&lt;c-u&gt;当前光标单词转换为大写，并进入插入模式</span>
+</span></code></pre>
+<ul>
+<li>精确映射</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 非递归映射 《任何时候！！！》</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-storage z-function z-viml">\</span> dd
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml">help <span class="z-support z-function z-viml">unmap</span> <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> unm[ap]  -&gt; unm[ap] nun[map] vu[nmap] xu[nmap] sunm[ap] ou[nmap] unm[ap]! iu[nmap] lu[nmap] cu[nmap] tunma[p]
+</span></span></code></pre>
+<ul>
+<li>Leaders</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 映射按键序列（前缀）</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> -d dd
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> -c ddO
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; Leaders</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">let</span> mapleader = <span class="z-string z-quoted z-double z-viml">&quot;-&quot;</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span>d dd
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span>c ddO
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; LocalLeader 仅对部分文件设置</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">let</span> maplocalleader = <span class="z-string z-quoted z-double z-viml">&quot;\\&quot;</span> <span class="z-string z-quoted z-double z-viml">&quot; 注意&quot;</span><span class="z-storage z-function z-viml">\</span><span class="z-storage z-function z-viml">\</span><span class="z-string z-quoted z-double z-viml">&quot; 是 &quot;</span><span class="z-storage z-function z-viml">\</span><span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 的转义
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;localleader&gt;</span>d dd
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;localleader&gt;</span>c ddO
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml">help mapleader <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> map &lt;leader&gt;A oanther line&lt;esc&gt;
+</span></span><span class="z-source z-viml">help maplocalleader <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> map &lt;buffer&gt; &lt;localleader&gt;A oanther line&lt;esc&gt;
+</span></span></code></pre>
+<ul>
+<li>编辑你的Vimrc文件</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 编辑我的vimrc文件</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span>ev :vspilt $MYVIMRC<span class="z-support z-type z-viml">&lt;cr&gt;</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 重读我的vimrc文件</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span>sv :source $MYVIMRC<span class="z-support z-type z-viml">&lt;cr&gt;</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml">help myvimrc
+</span></code></pre>
+<ul>
+<li>Abbreviactions</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 适用于insert、replace、command模式</span>
+</span><span class="z-source z-viml">iabbrev adn and <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> 输入非字母、数字、下划线的字符，引发替换
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">set</span> iskeyword? <span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span> iskeyword=@,48-57,_,192-255
+</span></span><span class="z-source z-viml">iabbrev <span class="z-variable z-other z-viml">@</span><span class="z-variable z-other z-viml">@</span> echemoo<span class="z-variable z-other z-viml">@gmail</span><span class="z-storage z-function z-viml">.</span>com
+</span><span class="z-source z-viml">iabbrev ccopy Copyright <span class="z-constant z-numeric z-integer">2024</span> Jonas Lee, all rights reserved<span class="z-storage z-function z-viml">.</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 按键映射 vs Abbreviations(按键映射输入即替换，易出错)</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">inoremap</span> ssig -- <span class="z-support z-type z-viml">&lt;cr&gt;</span>Jonas Lee<span class="z-support z-type z-viml">&lt;cr&gt;</span>echemoo<span class="z-variable z-other z-viml">@gmail</span><span class="z-storage z-function z-viml">.</span>com
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 添加邮箱、博客网址、签名等abbreviations配置；</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 添加常用文本配置</span>
+</span></code></pre>
+<ul>
+<li>更多的Mappings</li>
+</ul>
+<pre data-lang="vim" class="language-vim z-code"><code class="language-vim" data-lang="vim"><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 更常用的退出(停顿 vs 无停顿)</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">inoremap</span> jk <span class="z-support z-type z-viml">&lt;esc&gt;</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 更复杂的Mapping（当前单词收尾插入引号）</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span><span class="z-string z-quoted z-double z-viml">&quot; viw&lt;esc&gt;a&quot;</span><span class="z-support z-type z-viml">&lt;esc&gt;</span>hbi<span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span>&lt;esc&gt;lel
+</span></span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 练习</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 创建单引号版本；</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">nnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span><span class="z-string z-quoted z-single z-viml">&#39; viw&lt;esc&gt;a&#39;</span><span class="z-support z-type z-viml">&lt;esc&gt;</span>hbi&#39;<span class="z-support z-type z-viml">&lt;esc&gt;</span>lel
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; 引号将高亮选中的文本包裹。</span>
+</span><span class="z-source z-viml"><span class="z-support z-function z-viml">vnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span><span class="z-string z-quoted z-double z-viml">&quot; &lt;esc&gt;`&lt;i&quot;</span><span class="z-support z-type z-viml">&lt;esc&gt;</span>`&gt;<span class="z-support z-function z-viml">la</span><span class="z-comment z-line z-quotes z-viml"><span class="z-punctuation z-definition z-comment z-vim">&quot;</span>&lt;esc&gt;
+</span></span><span class="z-source z-viml"><span class="z-support z-function z-viml">vnoremap</span> <span class="z-support z-type z-viml">&lt;leader&gt;</span><span class="z-string z-quoted z-single z-viml">&#39; &lt;esc&gt;`&lt;i&#39;</span><span class="z-support z-type z-viml">&lt;esc&gt;</span>`&gt;<span class="z-support z-function z-viml">la</span>&#39;<span class="z-support z-type z-viml">&lt;esc&gt;</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; normal模式下 H 映射为当前行首部。</span>
+</span><span class="z-source z-viml"><span class="z-comment z-line z-quotes z-viml">&quot; normal模式下 L 映射为当前行尾部。</span>
+</span><span class="z-source z-viml">help H
+</span><span class="z-source z-viml">help L
+</span></code></pre>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="/tags/si-ren/">#私人</a>
+                    
+                        <a href="/tags/vim/">#VIM</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="&#x2F;go-microservices&#x2F;">‹ GO微服务开发环境搭建</a>
+                    
+                    
+                        <a class="next" href="&#x2F;first-post&#x2F;">第一篇博客 ›</a>
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="/even.js" ></script>
+      
+    </body>
+
+</html>
