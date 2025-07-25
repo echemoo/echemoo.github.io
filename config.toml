@@ -1,5 +1,6 @@
 # The URL the site will be built for
-base_url = "https://echemoo.github.io"
+# base_url = "https://echemoo.github.io"
+base_url = "/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -10,8 +11,8 @@ description = "棋木的个人空间"
 
 taxonomies = [
     # You can enable/disable RSS
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
+    { name = "categories", feed = true },
+    { name = "tags", feed = true },
 ]
 
 # Whether to build a search index to be used later on by a JavaScript library
@@ -29,10 +30,10 @@ highlight_theme = "css"
 katex_enable = true
 katex_auto_render = true
 even_menu = [
-    {url = "$BASE_URL", name = "首页"},
-    {url = "$BASE_URL/categories", name = "分类"},
-    {url = "$BASE_URL/tags", name = "标签"},
-    {url = "$BASE_URL/about", name = "关于"},
+    { url = "$BASE_URL", name = "首页" },
+    { url = "$BASE_URL/categories", name = "分类" },
+    { url = "$BASE_URL/tags", name = "标签" },
+    { url = "$BASE_URL/about", name = "关于" },
 ]
 
 author = "echemoo"
